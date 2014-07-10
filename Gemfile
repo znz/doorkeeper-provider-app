@@ -44,6 +44,7 @@ gem 'font-awesome-sass'
 gem 'slim-rails'
 
 gem 'devise'
+gem 'devise-i18n-views'
 gem 'doorkeeper'
 gem 'cancancan'
 gem 'rolify'
