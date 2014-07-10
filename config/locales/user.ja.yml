@@ -1,0 +1,27 @@
+ja:
+  activerecord:
+    models:
+      user: "ユーザー"
+    attributes:
+      user:
+        authentication_token:   "認証トークン"
+        confirmation_sent_at:   "確認送信時刻"
+        confirmation_token:     "確認トークン"
+        confirmed_at:           "確認時刻"
+        current_password:       "現在のパスワード" # devise 用
+        current_sign_in_at:     "現在のログイン時刻"
+        current_sign_in_ip:     "現在のログインIP"
+        email:                  "電子メール"
+        encrypted_password:     "暗号化されたパスワード"
+        failed_attempts:        "失敗回数"
+        last_sign_in_at:        "最終ログイン時刻"
+        last_sign_in_ip:        "最終ログインIP"
+        locked_at:              "ロック時刻"
+        name:                   "名前"
+        password:               "パスワード"
+        password_confirmation:  "パスワードの確認"
+        remember_created_at:    "リメンバートークン作成時刻"
+        reset_password_sent_at: "リセットパスワード送信時刻"
+        reset_password_token:   "リセットパスワードトークン"
+        unconfirmed_email:      "確認できていないメールアドレス"
+        unlock_token:           "ロック解除トークン"
