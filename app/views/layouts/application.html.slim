@@ -1,13 +1,15 @@
 doctype html
 html
   head
+    meta charset="utf-8"
+    meta http-equiv="X-UA-Compatible" content="IE=edge"
+    meta name="viewport" content="width=device-width, initial-scale=1"
     title Doorkeeper Auth Server Example
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   body
-    = render partial: 'layouts/sign_in_or_out'
-    = render partial: 'layouts/locale'
-    p.notice= notice
-    p.alert= alert
-    = yield
+    = render partial: 'layouts/navbar'
+    .container
+      = render partial: 'layouts/flash'
+      = yield
