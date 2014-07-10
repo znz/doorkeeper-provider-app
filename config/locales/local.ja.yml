@@ -1,0 +1,5 @@
+ja:
+  devise:
+    shared:
+      links:
+        sign_out: "ログアウト"
