@@ -10,7 +10,7 @@
     bundle install
     ./bin/rake db:migrate
     ./bin/rake db:seed
-	./bin/rails server
+    ./bin/rails server
 ```
 
 and open `http://localhost:3000`
@@ -30,3 +30,15 @@ See `db/seeds.rb`.
   Password: `adminpass`
 - Email: `user@example.com`,
   Password: `password`
+
+## Setup in Heroku
+
+```
+    heroku create
+    heroku addons:add heroku-postgresql
+    heroku config:set SECRET_KEY_BASE=$(rake secret) DEVISE_SECRET_KEY=$(rake secret) --remote heroku
+    git push heroku master
+    heroku run rake db:migrate
+    heroku run rake db:seed
+    heroku open
+```
