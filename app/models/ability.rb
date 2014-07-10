@@ -2,6 +2,18 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
+    admin = user.has_role?(:admin)
+    if admin
+      can :manage, :all
+    end
+
+    # ... other permissions ...
+
+    unless admin
+      # hide application secret from normal user
+      cannot :manage, Doorkeeper::Application
+    end
+
     # Define abilities for the passed in user here. For example:
     #
     #   user ||= User.new # guest user (not logged in)
