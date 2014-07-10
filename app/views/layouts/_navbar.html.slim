@@ -8,8 +8,12 @@ nav class="navbar navbar-default" role="navigation"
         span.icon-bar
       a.navbar-brand href="#" Brand
     .collapse.navbar-collapse#navbar-collapse-1
-      ul.nav.navbar-nav
-        li= render partial: 'layouts/sign_in_or_out'
+      - if user_signed_in?
+        ul.nav.navbar-nav
+          li= link_to t(:edit_your_account, default: "Edit Your Account"), edit_user_registration_path
+          - if current_user.has_role?(:admin)
+            li= link_to t(:oauth_applications, default: "OAuth Applications"), oauth_applications_path
+      ul.nav.navbar-nav.navbar-right
         li.dropdown
           a.dropdown-toggle href="#" data-toggle="dropdown"
             | Locale
@@ -17,3 +21,4 @@ nav class="navbar navbar-default" role="navigation"
             span.caret
           ul.dropdown-menu role="menu"
             = render partial: 'layouts/locale'
+        li= render partial: 'layouts/sign_in_or_out'
