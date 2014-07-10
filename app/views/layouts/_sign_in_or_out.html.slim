@@ -1,0 +1,8 @@
+- if user_signed_in?
+  = link_to destroy_user_session_path, method: :delete do
+    = icon(:'sign-out')
+    = t(:"devise.shared.links.sign_out", default: "Sign out")
+- else
+  = link_to new_user_session_path do
+    = icon(:'sign-in')
+    = t(:"devise.shared.links.sign_in", default: "Sign in")
