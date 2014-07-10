@@ -1,0 +1,30 @@
+en:
+  locale: "English"
+ca:
+  locale: "català"
+de:
+  locale: "Deutsch"
+es:
+  locale: "Español"
+es-AR:
+  locale: "Español"
+fr:
+  locale: "Français"
+hu:
+  locale: "Magyar"
+it:
+  locale: "Italiano"
+nl:
+  locale: "Nederlands"
+pl:
+  locale: "Polski"
+pt-BR:
+  locale: "Português"
+ru:
+  locale: "Русский"
+zh-CN:
+  locale: "中文(简)"
+zh-TW:
+  locale: "中文(繁)"
+ja:
+  locale: "日本語"

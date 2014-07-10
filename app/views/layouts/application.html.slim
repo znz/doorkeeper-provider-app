@@ -7,6 +7,7 @@ html
     = csrf_meta_tags
   body
     = render partial: 'layouts/sign_in_or_out'
+    = render partial: 'layouts/locale'
     p.notice= notice
     p.alert= alert
     = yield

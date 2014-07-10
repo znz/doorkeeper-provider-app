@@ -1,0 +1,3 @@
+ul
+  - I18n.available_locales.each do |locale|
+    li= link_to t(:locale, locale: locale, default: locale), locale: locale
