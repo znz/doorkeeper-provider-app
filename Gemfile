@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+ruby File.read(File.expand_path('../.ruby-version', __FILE__)).chomp.split('-')[0]
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
 # Use sqlite3 as the database for Active Record
