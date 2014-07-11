@@ -111,14 +111,16 @@ RSpec.describe MicropostsController, type: :controller do
   describe "PUT update" do
     describe "with valid params" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        {
+          content: "New Content",
+        }
       }
 
       it "updates the requested micropost" do
         micropost = Micropost.create! valid_attributes
         put :update, {:id => micropost.to_param, :micropost => new_attributes}, valid_session
         micropost.reload
-        skip("Add assertions for updated state")
+        expect(micropost.content).to eq("New Content")
       end
 
       it "assigns the requested micropost as @micropost" do
