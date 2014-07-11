@@ -1,10 +1,9 @@
 class MicropostsController < ApplicationController
-  before_action :set_micropost, only: [:show, :edit, :update, :destroy]
+  load_and_authorize_resource
 
   # GET /microposts
   # GET /microposts.json
   def index
-    @microposts = Micropost.all
   end
 
   # GET /microposts/1
@@ -14,7 +13,6 @@ class MicropostsController < ApplicationController
 
   # GET /microposts/new
   def new
-    @micropost = Micropost.new
   end
 
   # GET /microposts/1/edit
@@ -24,8 +22,6 @@ class MicropostsController < ApplicationController
   # POST /microposts
   # POST /microposts.json
   def create
-    @micropost = Micropost.new(micropost_params)
-
     respond_to do |format|
       if @micropost.save
         format.html { redirect_to @micropost, notice: 'Micropost was successfully created.' }
@@ -62,13 +58,8 @@ class MicropostsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_micropost
-      @micropost = Micropost.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def micropost_params
-      params.require(:micropost).permit(:content, :user_id)
-    end
+  def micropost_params
+    params.require(:micropost).permit(:content, :user_id)
+  end
 end

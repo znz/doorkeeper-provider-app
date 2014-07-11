@@ -18,7 +18,9 @@ require 'rails_helper'
 # Message expectations are only used when there is no simpler way to specify
 # that an instance is receiving a specific message.
 
-RSpec.describe MicropostsController, :type => :controller do
+RSpec.describe MicropostsController, type: :controller do
+  let(:user) { FactoryGirl.create(:user) }
+  before { sign_in user }
 
   # This should return the minimal set of attributes required to create a valid
   # Micropost. As you add validations to Micropost, be sure to

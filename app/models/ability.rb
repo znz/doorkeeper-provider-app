@@ -7,6 +7,9 @@ class Ability
       can :manage, :all
     end
 
+    can [:read, :create], Micropost
+    can [:update, :destroy], Micropost, user_id: user.id
+
     # ... other permissions ...
 
     unless admin
