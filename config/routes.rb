@@ -6,6 +6,13 @@ Rails.application.routes.draw do
   end
   devise_for :users
 
+  namespace :api do
+    namespace :v1 do
+      # another api routes
+      get '/me' => "credentials#me"
+      resources :microposts, only: [:index, :create]
+    end
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
