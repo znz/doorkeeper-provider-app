@@ -1,5 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe Micropost, :type => :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it do
+    expect(Micropost.new.valid?).to be_falsy
+  end
+
+  it do
+    expect(Micropost.new(content: "content").valid?).to be_truthy
+  end
 end
