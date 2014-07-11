@@ -1,0 +1,13 @@
+ja:
+  activerecord:
+    models:
+      micropost: "投稿"
+    attributes:
+      micropost:
+        content: "内容"
+        user:    "投稿者"
+        user_id: "投稿者"
+
+  new_micropost: "新規投稿"
+  editing_micropost: "投稿編集"
+  listing_microposts: "投稿一覧"

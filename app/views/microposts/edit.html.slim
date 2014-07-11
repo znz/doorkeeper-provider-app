@@ -1,7 +1,8 @@
-h1 Editing micropost
+h1= t(:'.editing_micropost', default: [:editing_micropost, 'Editing micropost'])
 
 == render 'form'
 
-= link_to 'Show', @micropost
-'|
-= link_to 'Back', microposts_path
+.row
+  .col-sm-6= link_to t(:'.back', default: [:back, 'Back']), microposts_path, class: 'btn btn-block btn-info'
+  - if can? :read, @micropost
+    .col-sm-6= link_to t(:'.show', default: [:show, 'Show']), @micropost, class: 'btn btn-block btn-info'

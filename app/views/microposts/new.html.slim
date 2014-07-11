@@ -1,5 +1,5 @@
-h1 New micropost
+h1= t(:'.new_micropost', default: [:new_micropost, 'New micropost'])
 
 == render 'form'
 
-= link_to 'Back', microposts_path
+= link_to t(:'.back', default: [:back, 'Back']), microposts_path, class: 'btn btn-block btn-info'

@@ -3,3 +3,9 @@ ja:
     shared:
       links:
         sign_out: "ログアウト"
+
+  back: "戻る"
+  confirm: "本当に削除しますか?"
+  destroy: "削除"
+  edit: "編集"
+  show: "表示"
