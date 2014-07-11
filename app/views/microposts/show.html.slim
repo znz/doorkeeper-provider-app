@@ -1,0 +1,12 @@
+p#notice = notice
+
+p
+  strong Content:
+  = @micropost.content
+p
+  strong User:
+  = @micropost.user
+
+= link_to 'Edit', edit_micropost_path(@micropost)
+'|
+= link_to 'Back', microposts_path

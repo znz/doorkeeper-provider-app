@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :microposts
+
   use_doorkeeper do
     controllers applications: 'custom_applications'
   end
