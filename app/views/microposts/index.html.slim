@@ -1,5 +1,8 @@
 h1= t(:'.listing_microposts', default: [:listing_microposts, 'Listing microposts'])
 
+.pull-right= paginate(@microposts)
+= page_entries_info(@microposts)
+
 table.table
   thead
     tr
@@ -23,5 +26,7 @@ table.table
             = link_to t(:'.destroy', default: [:destroy, 'Destroy']), micropost, data: {confirm: t(:'.confirm', default: [:confirm, 'Are you sure?'])}, method: :delete, class: 'btn btn-danger'
 
 br
+
+.pull-right= paginate(@microposts)
 
 = link_to t(:'.new_micropost', default: [:new_micropost, 'New Micropost']), new_micropost_path, class: 'btn btn-primary'

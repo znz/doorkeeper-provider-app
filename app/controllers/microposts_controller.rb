@@ -4,6 +4,8 @@ class MicropostsController < ApplicationController
   # GET /microposts
   # GET /microposts.json
   def index
+    @microposts = @microposts.page(params.permit(:page)[:page])
+    @microposts = @microposts.per(params.permit(:per)[:per])
   end
 
   # GET /microposts/1
