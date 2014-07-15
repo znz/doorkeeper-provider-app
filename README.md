@@ -66,3 +66,26 @@ And open `http://localhost:9393`.
 
 You can use `Sign in with OAuth 2 provider` link and `My Credentials` page,
 but `Profiles` page shows `OAuth2::Error` (because the API is not implemented).
+
+## Test with my client example
+
+Clone the client example:
+
+    git clone https://github.com/znz/doorkeeper-devise-client-app
+    cd doorkeeper-devise-client-app
+
+Register app to your provider with callback url `http://localhost:3000/users/auth/doorkeeper/callback` (or with any port)
+and create .env:
+
+    DOORKEEPER_APP_ID=f22e89c...
+    DOORKEEPER_APP_SECRET=0d15cb9...
+    DOORKEEPER_APP_URL=http://(your deployed provider).herokuapp.com/
+    DOORKEEPER_APP_NAME=doorkeeper-provider-app
+
+And run client:
+
+    bundle install
+    ./bin/rake db:migrate
+	./bin/rails server
+
+And open `http://localhost:3000`.
