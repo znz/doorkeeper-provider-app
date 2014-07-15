@@ -49,6 +49,7 @@ gem 'devise-i18n-views'
 gem 'doorkeeper'
 gem 'cancancan'
 gem 'rolify'
+gem 'kaminari'
 
 group :development do
   gem 'quiet_assets'
