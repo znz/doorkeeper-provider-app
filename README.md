@@ -60,7 +60,7 @@ and create env.rb:
 And run client:
 
     bundle install
-	bundle exec rackup config.ru -p 9393
+    bundle exec rackup config.ru -p 9393
 
 And open `http://localhost:9393`.
 
@@ -86,7 +86,7 @@ And run client:
 
     bundle install
     ./bin/rake db:migrate
-	./bin/rails server
+    ./bin/rails server
 
 And open `http://localhost:3000`.
 
