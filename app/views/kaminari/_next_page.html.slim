@@ -1,0 +1,2 @@
+li.next
+  == link_to_unless current_page.last?, t('views.pagination.next'.freeze).html_safe, url, rel: 'next'.freeze, remote: remote

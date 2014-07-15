@@ -1,0 +1,2 @@
+li.prev
+  == link_to_unless current_page.first?, t('views.pagination.previous'.freeze).html_safe, url, rel: 'prev'.freeze, remote: remote
