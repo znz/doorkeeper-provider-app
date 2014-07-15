@@ -89,3 +89,9 @@ And run client:
 	./bin/rails server
 
 And open `http://localhost:3000`.
+
+## APIs
+
+- `GET /api/v1/me` : get user's information
+- `GET /api/v1/microposts` : get microposts
+- `POST /api/v1/microposts` : create a micropost
