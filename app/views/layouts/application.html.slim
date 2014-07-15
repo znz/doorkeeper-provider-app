@@ -13,3 +13,13 @@ html
     .container
       = render partial: 'layouts/flash'
       = yield
+      - unless user_signed_in?
+        .well
+          = t(:'.example_users', default: [:example_users, 'Example Users:'])
+          dl
+            dt Admin User
+            dd Email: admin@example.com
+            dd Password: adminpass
+            dt Normal User
+            dd Email: user@example.com
+            dd Password: password
