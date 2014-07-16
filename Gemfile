@@ -46,7 +46,7 @@ gem 'slim-rails'
 
 gem 'devise'
 gem 'devise-i18n-views'
-gem 'doorkeeper'
+gem 'doorkeeper', github: 'doorkeeper-gem/doorkeeper'
 gem 'cancancan'
 gem 'rolify'
 gem 'kaminari'
