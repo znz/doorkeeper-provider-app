@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       # another api routes
       get '/me' => "credentials#me"
+      get '/profiles' => "credentials#profiles"
       resources :microposts, only: [:index, :create]
     end
   end

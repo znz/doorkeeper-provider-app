@@ -5,5 +5,9 @@ module Api::V1
     def me
       render json: current_resource_owner
     end
+
+    def profiles
+      render json: current_resource_owner, only: [:id, :email, :name]
+    end
   end
 end
