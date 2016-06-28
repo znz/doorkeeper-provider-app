@@ -1,8 +1,10 @@
 module Api::V1
   class MicropostsController < ApiController
-    doorkeeper_for :index,  :show,   scopes: %w"public"
-    doorkeeper_for :create, :update, scopes: %w"admin write"
-    respond_to     :json
+    before_action -> { doorkeeper_authorize! :public }, only: [:index, :show]
+    before_action only: [:create, :update] do
+      doorkeeper_authorize! :admin, :write
+    end
+    respond_to :json
 
     # avoid "Can't verify CSRF token authenticity"
     skip_before_action :verify_authenticity_token
