@@ -4,7 +4,7 @@ RSpec.describe "Microposts", type: :request do
   describe "GET /microposts" do
     pending "works! (now write some real specs)" do
       get microposts_path
-      expect(response.status).to be(200)
+      expect(response.status).to eq(200)
     end
   end
 end
