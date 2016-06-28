@@ -4,21 +4,20 @@ module Api::V1
     before_action only: [:create, :update] do
       doorkeeper_authorize! :admin, :write
     end
-    respond_to :json
 
     # avoid "Can't verify CSRF token authenticity"
     skip_before_action :verify_authenticity_token
 
     def index
       @microposts = Micropost.all
-      respond_with @microposts
+      render json: @microposts
     end
 
     def create
       micropost = Micropost.new(micropost_params)
       micropost.user = current_resource_owner
       micropost.save!
-      respond_with micropost
+      render json: micropost, status: 201
     end
 
     private
