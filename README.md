@@ -48,7 +48,7 @@ Clone the client example:
     git clone https://github.com/doorkeeper-gem/doorkeeper-sinatra-client
     cd doorkeeper-sinatra-client
 
-Register app to your provider with callback url `http://localhost:9393/callback`,
+Register app to your provider with Redirect URI `http://localhost:9393/callback`,
 and create env.rb:
 
     # env.rb
@@ -95,3 +95,9 @@ And open `http://localhost:3000`.
 - `GET /api/v1/me` : get user's information
 - `GET /api/v1/microposts` : get microposts
 - `POST /api/v1/microposts` : create a micropost
+
+## Updates
+
+If you use this app before e2c0116484afeddcecba26c044dacc760c28fa6c,
+you must run `rake db:migrate:down VERSION=20140710063339` and `rake db:migrate` again.
+(It drops oauth applications, etc.)
