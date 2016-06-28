@@ -1,3 +1,5 @@
 - I18n.available_locales.each do |locale|
-  - next if locale != I18n.default_locale && t(:locale, locale: locale) == t(:locale, locale: I18n.default_locale)
-  li= link_to t(:locale, locale: locale, default: locale), locale: locale
+  - if locale != I18n.default_locale && t(:locale, locale: locale) == t(:locale, locale: I18n.default_locale)
+    li= link_to locale, locale: locale
+  - else
+    li= link_to t(:locale, locale: locale, default: locale), locale: locale
