@@ -1,8 +1,6 @@
-# Read about factories at https://github.com/thoughtbot/factory_girl
-
-FactoryGirl.define do
+FactoryBot.define do
   factory :micropost do
-    content "MyString"
-    user nil
+    content { "MyString" }
+    user
   end
 end

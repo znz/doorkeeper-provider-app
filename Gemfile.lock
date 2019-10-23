@@ -82,11 +82,11 @@ GEM
       railties (>= 4.2)
     erubis (2.7.0)
     execjs (2.7.0)
-    factory_girl (4.9.0)
-      activesupport (>= 3.0.0)
-    factory_girl_rails (4.9.0)
-      factory_girl (~> 4.9.0)
-      railties (>= 3.0.0)
+    factory_bot (5.1.1)
+      activesupport (>= 4.2.0)
+    factory_bot_rails (5.1.1)
+      factory_bot (~> 5.1.0)
+      railties (>= 4.2.0)
     ffi (1.11.1)
     font-awesome-sass (5.11.2)
       sassc (>= 1.11)
@@ -257,7 +257,7 @@ DEPENDENCIES
   devise
   devise-i18n
   doorkeeper
-  factory_girl_rails
+  factory_bot_rails
   font-awesome-sass
   jbuilder (~> 2.0)
   jquery-rails

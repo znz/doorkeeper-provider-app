@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe WelcomeController, type: :controller do
-  let(:user) { FactoryGirl.create(:user) }
+  let(:user) { FactoryBot.create(:user) }
 
   describe "GET 'index'" do
     it "returns http success" do
