@@ -5,7 +5,7 @@ ruby File.read(File.expand_path('../.ruby-version', __FILE__)).chomp.split('-')[
 gem 'rails', '4.2.6'
 # Use sqlite3 as the database for Active Record
 gem 'pg', group: :postgresql
-gem 'sqlite3', group: [:development, :test]
+gem 'sqlite3', '~> 1.3.11', group: [:development, :test]
 gem 'rails_12factor', group: :production
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
