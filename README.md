@@ -96,6 +96,16 @@ And open `http://localhost:3000`.
 - `GET /api/v1/microposts` : get microposts
 - `POST /api/v1/microposts` : create a micropost
 
+## Test with curl
+
+- Create application at `http://localhost:3000/oauth/applications`
+- Set `Application Id` to `$client_id`, `Secret` to `$client_secret`
+- Click `Authorize` button and set `Authorization code` to `$code`
+- `curl -v -F grant_type=authorization_code -F client_id=$client_id -F client_secret=$client_secret -F code=$code -F redirect_uri=urn:ietf:wg:oauth:2.0:oob -XPOST http://localhost:3000/oauth/token`
+- Set `access_token` in the response to `$tokenn`
+- `curl -v -H "Authorization: Bearer $token" http://localhost:3000/api/v1/me`
+- `curl -v -H "Authorization: Bearer $token" http://localhost:3000/api/v1/profiles`
+
 ## Updates
 
 If you use this app before e2c0116484afeddcecba26c044dacc760c28fa6c,
