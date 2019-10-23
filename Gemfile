@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby File.read(File.expand_path('../.ruby-version', __FILE__)).chomp.split('-')[0]
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.6'
+gem 'rails', '~> 4.2.6'
 # Use sqlite3 as the database for Active Record
 gem 'pg', group: :postgresql
 gem 'sqlite3', '~> 1.3.11', group: [:development, :test]
